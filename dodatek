@@ -1,0 +1,8 @@
+using (var db = new ObslugaBazyDanych())
+            {
+                var zamiennik = db.towar.First(a => a.ID == Int32.Parse(textBoxID.Text));
+                zamiennik.Nazwa = textBoxZamiana.Text;
+                db.SaveChanges();
+            }
+            GridLoad();
+         
